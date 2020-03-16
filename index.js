@@ -31,6 +31,8 @@ $(document).ready(function(){
         $('.try20').addClass('game__circle13');
         $('.try21').addClass('game__circle14');
         $('.try22').addClass('game__circle15');
+        $('.try25').addClass('game__time');
+
 
 
         $('.try8').addClass('game__board');
@@ -160,7 +162,19 @@ $(document).ready(function(){
             }
         })
 
-        
+        let time = setInterval(() => {
+            let overTime = Number($('.game__time').text())
+            $('.game__time').text(overTime -1);
+            console.log(overTime)
+            if(Number($('.game__time').text() == 0)) {
+                $('.game__field').add('.game__field').addClass("gameover").text('Game Over!')
+                $(".gameover").text('Game Over!').append("<p>Your Points: " + points + "<p>").css("text-align", "center").css("font-size", "4rem");
+
+                clearInterval(time)
+            }
+        }, 1000)
+
+
         return false;
     });
 

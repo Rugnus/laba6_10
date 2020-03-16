@@ -16,6 +16,10 @@
   display: none;
 }
 
+.try25 {
+  display: none;
+}
+
 .hide__circle {
   visibility: hidden;
 }
@@ -58,10 +62,23 @@
   font-family: "Roboto Condensed", sans-serif;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 2rem;
   width: 100%;
+}
+.game__fields .game__time {
+  display: block;
+  border-radius: 5%;
+  background-color: #512b58;
+  position: relative;
+  width: 10%;
+  height: 15rem;
+  border: 1px solid red;
+  color: #fff;
+  text-align: center;
+  text-align: center;
 }
 .game__fields .game__timing {
   border-radius: 5%;
@@ -93,6 +110,8 @@
 }
 
 .gameover {
+  font-size: 4rem;
+  text-align: center;
   color: #fff;
   border-radius: 2%;
   background-color: #ff1e56;
@@ -376,4 +395,13 @@
 .try7, .try8, .try9, .try10, .try11, .try12, .try13, .try14, .try15, .try16, .try17, .try18, .try19, .try20, .try21, .try22 {
   -webkit-user-select: none;
           user-select: none;
+}
+
+.new2 {
+  display: block;
+  padding: 2rem;
+  color: white;
+  background-color: #e22b43;
+  font-size: 40px;
+  font-family: sans-serif;
 }
