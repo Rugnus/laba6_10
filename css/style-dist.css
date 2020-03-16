@@ -1,0 +1,101 @@
+@import 'input.css';
+@import 'button.css';
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  background-color: #ff5787;
+  width: 100%;
+  height: 100vh;
+}
+.container .container__title {
+  padding-top: 10%;
+  position: relative;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Baloo Thambi 2", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(-182deg, #ff2ee3 10%, #ff54dade 40%, #f023c3 70%, #ff580a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game {
+  width: 100%;
+  height: 100vh;
+}
+
+.game__user {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.game__fields {
+  font-family: "Roboto Condensed", sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2rem;
+  width: 100%;
+}
+.game__fields .game__timing {
+  position: relative;
+  width: 18%;
+  height: 15rem;
+  border: 1px solid red;
+  color: #fff;
+  text-align: center;
+}
+.game__fields .game__field {
+  position: relative;
+  width: 60%;
+  height: 83vh;
+  border: 1px solid red;
+}
+.game__fields .game__user_points {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  width: 18%;
+  height: 15rem;
+  border: 1px solid red;
+}
+
+.game__circle1 {
+  position: absolute !important;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.circle_animation {
+  animation-name: circle;
+  animation-delay: 1s;
+}
+
+@keyframes circle {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
