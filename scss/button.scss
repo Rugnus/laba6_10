@@ -1,9 +1,20 @@
+@mixin trans($translate) {
+    -webkit-transform: $translate;
+    transform: $translate;
+}
+
+@mixin transform($tranX) {
+    -webkit-transform: $tranX;
+    transform: $tranX;
+}
+
 .container__button {
     position:relative;
     left:50%;
     margin-top:50px;
-    -webkit-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
+    @include trans(translate(-50%,-50%));
+    // -webkit-transform:translate(-50%,-50%);
+    // transform:translate(-50%,-50%);
     padding-left: 43%;
     }
      
@@ -39,8 +50,9 @@
     }
      
     .btn-gr:hover:after {
-    -webkit-transform:translateX(-200px);
-    transform:translateX(-200px)
+    @include transform(translateX(-200px));
+    // -webkit-transform:translateX(-200px);
+    // transform:translateX(-200px)
     }
      
     .btn-gr span {

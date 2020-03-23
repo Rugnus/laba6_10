@@ -8,6 +8,20 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffe2ff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #f19292, #ffd1bd);
+  border-radius: 5px;
+}
+
 .show {
   display: block !important;
 }
@@ -44,6 +58,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.container .container__title .container__title:hover {
+  background: white;
+}
 
 .game {
   width: 100%;
@@ -51,7 +68,8 @@
 }
 
 .game__user {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed";
+  font-style: normal;
   color: #fff;
   font-size: 2rem;
   text-align: center;
@@ -68,14 +86,13 @@
   margin-top: 2rem;
   width: 100%;
 }
-.game__fields .game__time {
+.game__fields > .game__time {
   display: block;
   border-radius: 5%;
-  background-color: #512b58;
+  background-color: #b176bb;
   position: relative;
   width: 10%;
-  height: 15rem;
-  border: 1px solid red;
+  height: 3rem;
   color: #fff;
   text-align: center;
   text-align: center;
@@ -86,17 +103,16 @@
   position: relative;
   width: 18%;
   height: 15rem;
-  border: 1px solid red;
   color: #fff;
   text-align: center;
 }
 .game__fields .game__field {
+  overflow: hidden;
   border-radius: 2%;
   background-color: #512b58;
   position: relative;
   width: 60%;
-  height: 73vh;
-  border: 1px solid red;
+  height: 40rem;
 }
 .game__fields .game__user_points {
   border-radius: 5%;
@@ -106,7 +122,6 @@
   position: relative;
   width: 18%;
   height: 15rem;
-  border: 1px solid red;
 }
 
 .gameover {
@@ -118,270 +133,137 @@
   position: relative;
   width: 60%;
   height: 73vh;
-  border: 1px solid red;
+}
+
+.winner {
+  display: block;
+  font-size: 4rem;
+  text-align: center;
+  color: #000;
+  border-radius: 2%;
+  background-color: #16ffa6;
+  position: relative;
+  width: 60%;
+  height: 73vh;
 }
 
 .game__circle1 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem;
   width: 1.7rem;
   height: 1.7rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 0.8s;
 }
 .game__circle1:hover {
   background-color: green;
 }
 
 .game__circle2 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 5rem;
   width: 1.7rem;
   height: 1.7rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 0.7s;
 }
 .game__circle2:hover {
   background-color: green;
 }
 
 .game__circle3 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 3rem;
   width: 1.7rem;
   height: 1.7rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 0.9s;
 }
 .game__circle3:hover {
   background-color: green;
 }
 
 .game__circle4 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 2.2rem;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 3rem;
+  height: 3rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 0.9s;
 }
 .game__circle4:hover {
   background-color: green;
 }
 
 .game__circle5 {
-  position: absolute !important;
-  top: 0%;
-  margin: 2rem 6rem;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 3rem;
+  height: 3rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 1s;
 }
 .game__circle5:hover {
   background-color: green;
 }
 
 .game__circle6 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 10rem;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 3rem;
+  height: 3rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 0.7s;
 }
 .game__circle6:hover {
   background-color: green;
 }
 
 .game__circle7 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 19rem;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 5rem;
+  height: 5rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 0.2s;
 }
 .game__circle7:hover {
   background-color: green;
 }
 
 .game__circle8 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 15rem;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 5rem;
+  height: 5rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 3s forwards linear, end 3.1s linear;
-  animation-delay: 1s;
 }
 .game__circle8:hover {
   background-color: green;
 }
 
 .game__circle9 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 17rem;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 5rem;
+  height: 5rem;
   background-color: #fff;
+  display: block;
+  transition: 0.5s linear;
   position: relative;
   cursor: pointer;
-  animation: circle 2s forwards linear, end 3.1s linear;
-  animation-delay: 1.2s;
 }
 .game__circle9:hover {
   background-color: green;
 }
 
-.game__circle10 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 20rem;
-  width: 1.7rem;
-  height: 1.7rem;
-  background-color: #fff;
-  position: relative;
-  cursor: pointer;
-  animation: circle 1.6s forwards linear, end 3.1s linear;
-  animation-delay: 0.7s;
-}
-.game__circle10:hover {
-  background-color: green;
-}
-
-.game__circle11 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 13rem;
-  width: 1.7rem;
-  height: 1.7rem;
-  background-color: #fff;
-  position: relative;
-  cursor: pointer;
-  animation: circle 4s forwards linear, end 4.1s linear;
-  animation-delay: 0.7s;
-}
-.game__circle11:hover {
-  background-color: green;
-}
-
-.game__circle12 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 23rem;
-  width: 1.7rem;
-  height: 1.7rem;
-  background-color: #fff;
-  position: relative;
-  cursor: pointer;
-  animation: circle 2.7s forwards linear, end 2.8s linear;
-  animation-delay: 0.5s;
-}
-.game__circle12:hover {
-  background-color: green;
-}
-
-.game__circle13 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 23rem;
-  width: 1.7rem;
-  height: 1.7rem;
-  background-color: #fff;
-  position: relative;
-  cursor: pointer;
-  animation: circle 5.7s forwards linear, end 5.8s linear;
-  animation-delay: 0.7s;
-}
-.game__circle13:hover {
-  background-color: green;
-}
-
-.game__circle14 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 23rem;
-  width: 1.7rem;
-  height: 1.7rem;
-  background-color: #fff;
-  position: relative;
-  cursor: pointer;
-  animation: circle 4.3s forwards linear, end 4.4s linear;
-  animation-delay: 1s;
-}
-.game__circle14:hover {
-  background-color: green;
-}
-
-.game__circle15 {
-  position: absolute !important;
-  top: 0%;
-  margin: 1rem 25rem;
-  width: 1.7rem;
-  height: 1.7rem;
-  background-color: #fff;
-  position: relative;
-  cursor: pointer;
-  animation: circle 4s forwards linear, end 4.2s linear;
-  animation-delay: 0.8s;
-}
-.game__circle15:hover {
-  background-color: green;
-}
-
-@keyframes circle {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(300px);
-  }
-  75% {
-    transform: translateY(440px);
-  }
-  100% {
-    transform: translateY(441px);
-    visibility: hidden;
-  }
-}
-@keyframes end {
-  100% {
-    transform: translateY(441px);
-    visibility: hidden;
-  }
-}
 .game__board {
   position: absolute !important;
   position: relative;
