@@ -16,15 +16,15 @@ $(document).ready(function(){
         $('.try3').addClass('game__timing');
         $('.try4').addClass('game__field');
         $('.try5').addClass('game__user_points');
-        $('.try7').addClass('game__circle1');
-        $('.try9').addClass('game__circle2');
-        $('.try10').addClass('game__circle3');
-        $('.try11').addClass('game__circle4');
-        $('.try12').addClass('game__circle5');
-        $('.try13').addClass('game__circle6');
-        $('.try14').addClass('game__circle7');
-        $('.try15').addClass('game__circle8');
-        $('.try16').addClass('game__circle9');
+        $('.try7').addClass('game__circle1').text('30');
+        $('.try9').addClass('game__circle2').text('30');
+        $('.try10').addClass('game__circle3').text('30');
+        $('.try11').addClass('game__circle4').text('20');
+        $('.try12').addClass('game__circle5').text('20');
+        $('.try13').addClass('game__circle6').text('20');
+        $('.try14').addClass('game__circle7').text('10');
+        $('.try15').addClass('game__circle8').text('10');
+        $('.try16').addClass('game__circle9').text('10');
         $('.try25').addClass('game__time');
 
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
                 'top' : randomVertical+'px',
                 'left' : randomHorizontal+'px'
             })
-        }, 2000)}
+        }, 800)}
 
 elements = [$('.game__circle1'),$('.game__circle2'),$('.game__circle3'),$('.game__circle4'),$('.game__circle5'), $('.game__circle6'), $('.game__circle7'), $('.game__circle8'), $('.game__circle9')];
     console.log(elements.length)
@@ -80,59 +80,100 @@ elements = [$('.game__circle1'),$('.game__circle2'),$('.game__circle3'),$('.game
             $(".game__circle1").addClass('hide__circle');
             points =points + 30;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
 
         });
         $(".game__circle2").click(function(){
             $(".game__circle2").addClass('hide__circle');
             points = points + 30;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
 
         $(".game__circle3").click(function(){
             $(".game__circle3").addClass('hide__circle');
             points = points + 30;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
         $(".game__circle4").click(function(){
             $(".game__circle4").addClass('hide__circle');
             points = points + 20;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
         $(".game__circle5").click(function(){
             $(".game__circle5").addClass('hide__circle');
             points = points + 20;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
         $(".game__circle6").click(function(){
             $(".game__circle6").addClass('hide__circle');
             points = points + 20;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
 
         $(".game__circle7").click(function(){
             $(".game__circle7").addClass('hide__circle');
             points = points + 10;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
 
         $(".game__circle8").click(function(){
             $(".game__circle8").addClass('hide__circle');
             points = points + 10;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
 
         $(".game__circle9").click(function(){
             $(".game__circle9").addClass('hide__circle');
             points = points + 10;
             $('.game__user_points').empty().append(points);
+            if(points >= 180) {
+                $('.game__field').removeClass('game__field');
+                $('.try4').addClass('winner');
+                $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
+            };
         });
         
         // Если игрок набрал максимальное кол-во баллов, то вручение ему звания победителя
-        if(points >= 180) {
-            $('.game__field').removeClass('game__field');
-            $('.try4').addClass('winner');
-            $('.winner').text('You win!!!').css("font-size", "4rem").css("text-align", "center");
-        };
+        
         
         // Убавка серцец, если не попал в квадрат(Возможна переделка под время)
 
